@@ -1,0 +1,32 @@
+.app {
+  background-image: url('src/assets/bg.png');
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+ 
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.claimBtn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:disabled {
+    background: #555;
+    cursor: not-allowed;
+  }
+}
