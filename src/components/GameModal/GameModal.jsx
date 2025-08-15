@@ -14,7 +14,7 @@ const GameModal = ({
       <div className={styles.modal}>
         <img
           className={styles.logo}
-          src="/public/icons/logo.svg"
+          src="/icons/logo.svg"
           alt="logo"
         />
         {type === "bomb" && (
@@ -27,12 +27,12 @@ const GameModal = ({
               this field...
             </p>
             <span className={styles.iconModal}>
-              <img src="/public/icons/bomb.svg" alt="bomb" />
+              <img src="/icons/bomb.svg" alt="bomb" />
             </span>
             <span className={styles.cash}>
               <img
                 className={styles.icon}
-                src="/public/icons/cash.svg"
+                src="/icons/cash.svg"
                 alt="cash"
               />
               {balance}
@@ -45,7 +45,7 @@ const GameModal = ({
               >
                 <span>
                   <img
-                    src="/public/icons/bomb.svg"
+                    src="/icons/bomb.svg"
                     height={24}
                     width={24}
                     alt="bomb"
@@ -59,7 +59,7 @@ const GameModal = ({
               >
                 Defuse for
                 <span>
-                  <img src="/public/gem.png" alt="gem" />
+                  <img src="/gem.png" alt="gem" />
                 </span>
               </button>
             </div>
@@ -73,12 +73,12 @@ const GameModal = ({
             </h2>
             <p>You've reached the end of this run...</p>
             <span className={styles.iconModal}>
-              <img src="/public/icons/stop.svg" alt="stop" />
+              <img src="/icons/stop.svg" alt="stop" />
             </span>
             <span className={styles.cash}>
               <img
                 className={styles.icon}
-                src="/public/icons/cash.svg"
+                src="/icons/cash.svg"
                 alt="cash"
               />
               {balance}
@@ -97,7 +97,7 @@ const GameModal = ({
             <span className={styles.cash}>
               <img
                 className={styles.icon}
-                src="/public/icons/cash.svg"
+                src="/icons/cash.svg"
                 alt="cash"
               />
               {balance}

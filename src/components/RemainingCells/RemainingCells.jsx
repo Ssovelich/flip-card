@@ -6,7 +6,7 @@ const RemainingCells = ({ remaining }) => {
       <div className={styles.item}>
         <img
           className={styles.icon}
-          src="/public/icons/cash.svg"
+          src="/icons/cash.svg"
           alt="cash"
         />
         <span>{remaining.cash}</span>
@@ -19,19 +19,19 @@ const RemainingCells = ({ remaining }) => {
       </div>
       <div className={styles.item}>
         <span className={styles.zero}>
-          <img src="/public/icons/zero.svg" alt="zero" />
+          <img src="/icons/zero.svg" alt="zero" />
         </span>
         <span>{remaining.zero}</span>
       </div>
       <div className={styles.item}>
         <span className={styles.bomb}>
-          <img src="/public/icons/bomb.svg" alt="bomb" />
+          <img src="/icons/bomb.svg" alt="bomb" />
         </span>
         <span>{remaining.bomb}</span>
       </div>
       <div className={styles.item}>
         <span className={styles.stop}>
-          <img src="/public/icons/stop.svg" alt="stop" />
+          <img src="/icons/stop.svg" alt="stop" />
         </span>
         <span>{remaining.stop}</span>
       </div>
