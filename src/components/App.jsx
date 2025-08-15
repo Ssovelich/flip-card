@@ -79,7 +79,7 @@ const App = () => {
       const startPos = {
         x: cellRect.left,
         y: cellRect.top,
-        icon: "/public/icons/cash.svg",
+        icon: "/icons/cash.svg",
         targetX: headerRect.left,
         targetY: headerRect.top,
         animate: false,

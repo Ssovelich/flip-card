@@ -11,7 +11,7 @@ const Header = ({ balance, multiplier, iconRef }) => {
     <div className={styles.header}>
       <img
         className={styles.logo}
-        src="/public/icons/logo.svg"
+        src="/icons/logo.svg"
         alt="logo"
       />
       <h1 className={styles.titleWrapper}>
@@ -27,7 +27,7 @@ const Header = ({ balance, multiplier, iconRef }) => {
           <img
             ref={iconRef}
             className={styles.icon}
-            src="/public/icons/cash.svg"
+            src="/icons/cash.svg"
             alt="cash"
           />
           <CountUp
