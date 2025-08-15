@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // padding: 20px;
   width: 428px;
   height: 926px;
 }
@@ -13,28 +12,25 @@
   display: grid;
   grid-template-columns: repeat(3, 113px);
   gap: 8px;
-  margin: 20px 0;
+  margin-bottom: 32px;
 }
 
 .claimBtn {
   background: linear-gradient(180deg, #6dbf1d 0%, #498013 100%);
   color: white;
   border-radius: 8px;
-    padding: 7px 16px 9px 16px;
-    width: 348px;
-    height: 48px;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 100%;
-    text-align: center;
-  // cursor: pointer;
+  padding: 7px 16px 9px 16px;
+  width: 348px;
+  height: 48px;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
   transition: 0.2s;
 
   &:disabled {
     border: 1px dashed rgba(255, 255, 255, 0.2);
-    
     background: transparent;
-    
     color: rgba(255, 255, 255, 0.4);
     cursor: not-allowed;
   }

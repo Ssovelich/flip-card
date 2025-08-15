@@ -1,18 +1,102 @@
 .overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
 }
 
 .modal {
-  background: #222;
-  padding: 20px;
-  border-radius: 10px;
+  width: 428px;
+  height: 100%;
+  backdrop-filter: blur(16px);
+  background: rgba(0, 0, 0, 0.253);
+  border-radius: 0;
   text-align: center;
   color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logo {
+    width: 61px;
+    height: 35px;
+    margin-top: 50px;
+    margin-bottom: 170px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: #fff;
+  }
+  .titleDenger {
+    text-shadow: 0 1px 9px 0 #fe2c55;
+  }
+  .titleGameOver {
+    text-shadow: 0 1px 9px 0 #fff;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    width: 274px;
+    margin-inline: auto;
+  }
+  .iconModal {
+    width: 96px;
+    height: 96px;
+    margin-top: 44px;
+    margin-bottom: 16px;
+    margin-inline: auto;
+  }
+  .cash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+  }
+  .btn {
+    display: flex;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #6dbf1d 0%, #498013 100%);
+    gap: 4px;
+    block-size: border-box;
+    width: 194px;
+    height: 48px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.8);
+   transition: background 0.5s ease-in-out;
+
+    &:hover {
+      background: #999;
+    }
+   
+  }
+  .btnHit {
+    background: linear-gradient(180deg, #ff5858 0%, #993535 100%);
+  }
+  .btnDef {
+    background: linear-gradient(180deg, #ad69ff 0%, #6723cd 100%);
+  }
+  
 }
 
 .actions {
