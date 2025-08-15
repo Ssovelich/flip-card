@@ -1,8 +1,9 @@
 .cell {
-  perspective: 600px;
-  width: 100px;
-  height: 100px;
+  width: 113px;
+  height: 113px;
   cursor: pointer;
+  perspective: 600px;
+  border: 2px solid transparent;
 }
 
 .inner {
@@ -26,7 +27,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
+  font-weight: 700;
+font-size: 16px;
+line-height: 120%;
   border-radius: 8px;
 }
 
@@ -44,13 +47,13 @@
   color: white;
   transform: rotateY(180deg);
 
-  .cash{
+  .cash {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
 
-  .bomb{
+  .bomb {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,7 +62,8 @@
     height: 100%;
     border-radius: 8px;
   }
-  .zero{
+
+  .zero {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,13 +72,29 @@
     height: 100%;
     border-radius: 8px;
   }
-  .x2{
+
+  .x2 {
     display: flex;
     align-items: center;
     justify-content: center;
-     background-image: url("src/assets/bgX2.png");
+    background-image: url("src/assets/bgX2.png");
     width: 100%;
     height: 100%;
     border-radius: 8px;
   }
+}
+
+.highlight {
+  box-shadow: 0 0 12px 4px #82e02481;
+  border: 2px solid #82E024;
+  border-radius: 8px;
+}
+
+.flyingCash {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.6s ease-in-out, left 0s, top 0s;
 }

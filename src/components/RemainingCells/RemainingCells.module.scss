@@ -1,0 +1,51 @@
+.remaining {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 12px 0;
+  margin-top: 16px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: white;
+  }
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.x2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #365fb2;
+  padding: 4px;
+  width: 33px;
+  height: 28px;
+}
+
+.zero img {
+  width: 32px;
+  height: 32px;
+}
+
+.bomb img {
+  width: 32px;
+  height: 32px;
+}
+
+.stop img {
+ width: 32px;
+  height: 32px;
+}
