@@ -12,7 +12,7 @@ const Cell = forwardRef(({ type, short, isOpen, onClick, highlight }, ref) => {
     >
       <div className={styles.inner}>
         <div className={styles.front}>
-          <img src="/src/assets/icons/$.svg" alt="$" />
+          <img src="/public/icons/$.svg" alt="$" />
         </div>
 
         <div className={styles.back}>
@@ -20,7 +20,7 @@ const Cell = forwardRef(({ type, short, isOpen, onClick, highlight }, ref) => {
             <span className={styles.cash}>
               <img
                 className={styles.icon}
-                src="/src/assets/icons/cash.svg"
+                src="/public/icons/cash.svg"
                 alt="cash"
               />
               {short}
@@ -29,26 +29,26 @@ const Cell = forwardRef(({ type, short, isOpen, onClick, highlight }, ref) => {
 
           {type === "x2" && (
             <span className={styles.x2}>
-              <img src="/src/assets/icons/x.svg" alt="x" />
-              <img src="/src/assets/icons/2.svg" alt="2" />
+              <img src="/public/icons/x.svg" alt="x" />
+              <img src="/public/icons/2.svg" alt="2" />
             </span>
           )}
 
           {type === "zero" && (
             <span className={styles.zero}>
-              <img src="/src/assets/icons/zero.svg" alt="zero" />
+              <img src="/public/icons/zero.svg" alt="zero" />
             </span>
           )}
 
           {type === "stop" && (
             <span className={styles.stop}>
-              <img src="/src/assets/icons/stop.svg" alt="stop" />
+              <img src="/public/icons/stop.svg" alt="stop" />
             </span>
           )}
 
           {type === "bomb" && (
             <span className={styles.bomb}>
-              <img src="/src/assets/icons/bomb.svg" alt="bomb" />
+              <img src="/public/icons/bomb.svg" alt="bomb" />
             </span>
           )}
         </div>
