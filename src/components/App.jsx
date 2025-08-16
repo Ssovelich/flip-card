@@ -108,14 +108,13 @@ const App = () => {
     }
 
     if (cell.type === "bomb") {
-  setIsExploded(true);
+      setIsExploded(true);
 
-  // Спочатку ефект вибуху, потім модалка
-  setTimeout(() => {
-    setIsExploded(false);
-    setModalType("bomb");
-  }, 800); // 1000ms = час вибуху з CSS
-}
+      setTimeout(() => {
+        setIsExploded(false);
+        setModalType("bomb");
+      }, 800);
+    }
   }
 
   function handleClaim() {
@@ -148,7 +147,7 @@ const App = () => {
   }
 
   return (
-     <div className={`${styles.app} ${isExploded ? styles.bombExplode : ""}`}>
+    <div className={`${styles.app} ${isExploded ? styles.bombExplode : ""}`}>
       <Header
         balance={balance}
         multiplier={multiplier}
