@@ -44,12 +44,9 @@
 }
 
 .backWrapper {
-  background-image: url("/bgCash.png");
+  background-image: url("/bgCash.png") center/cover no-repeat;
   color: white;
   transform: rotateY(180deg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
   .cash {
     display: flex;
@@ -61,10 +58,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/bgBomb.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url("/bgBomb.png") center/cover no-repeat;
     width: 100%;
     height: 100%;
     border-radius: 12px;
@@ -75,10 +69,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/bgZero.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("/bgZero.png") center/cover no-repeat;
     width: 100%;
     height: 100%;
     border-radius: 12px;
@@ -88,10 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/bgX2.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("/bgX2.png") center/cover no-repeat;
     width: 100%;
     height: 100%;
     border-radius: 12px;
@@ -101,10 +89,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/bgStop.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("/bgStop.png") center/cover no-repeat;
+
     width: 100%;
     height: 100%;
     border-radius: 12px;
