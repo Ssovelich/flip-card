@@ -18,47 +18,23 @@
   border-radius: 0;
   text-align: center;
   color: white;
-  padding: 20px;
+  padding: clamp(12px, 4vw, 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media (max-width: 428px) {
-    padding: 16px;
-  }
-
-  @media (max-width: 360px) {
-    padding: 12px;
-  }
 
   .logo {
     width: 61px;
     height: 35px;
     margin-top: 50px;
-    margin-bottom: 170px;
-
-    @media (max-width: 428px) {
-      margin-bottom: 60px;
-    }
-
-    @media (max-width: 360px) {
-      margin-bottom: 40px;
-    }
+    margin-bottom: clamp(40px, 15vw, 170px);
   }
 
   .title {
     font-weight: 700;
-    font-size: 24px;
+    font-size: clamp(18px, 6vw, 24px);
     line-height: 100%;
     color: #fff;
-
-    @media (max-width: 428px) {
-      font-size: 20px;
-    }
-
-    @media (max-width: 360px) {
-      font-size: 18px;
-    }
   }
   .titleDenger {
     text-shadow: 0 1px 9px 0 #fe2c55;
@@ -100,28 +76,16 @@
     background: linear-gradient(180deg, #6dbf1d 0%, #498013 100%);
     gap: 4px;
     block-size: border-box;
-    width: 194px;
-    height: 48px;
+    width: clamp(140px, 40vw, 194px);
+    height: clamp(40px, 12vw, 48px);
     font-weight: 800;
-    font-size: 18px;
+    font-size: clamp(14px, 5vw, 18px);
     line-height: 100%;
     color: rgba(255, 255, 255, 0.8);
     transition: background 0.5s ease-in-out;
 
     &:hover {
       background: #999;
-    }
-
-    @media (max-width: 428px) {
-      width: 160px;
-      height: 42px;
-      font-size: 15px;
-    }
-
-    @media (max-width: 360px) {
-      width: 140px;
-      height: 40px;
-      font-size: 14px;
     }
   }
   .btnHit {

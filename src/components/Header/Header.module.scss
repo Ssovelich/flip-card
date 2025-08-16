@@ -8,61 +8,29 @@
   .logo {
     width: 61px;
     height: 35px;
-    margin-top: 50px;
-    margin-bottom: 66px;
-
-    @media (max-width: 428px) {
-      margin-top: 40px;
-      margin-bottom: 58px;
-    }
-
-    @media (max-width: 360px) {
-      margin-top: 32px;
-      margin-bottom: 46px;
-    }
+    margin-top: clamp(32px, 10vw, 50px);
+    margin-bottom: clamp(46px, 12vw, 66px);
   }
 
   .titleWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-    margin-bottom: 32px;
+    gap: clamp(8px, 4vw, 16px);
+    margin-bottom: clamp(20px, 7vw, 32px);
 
     .title {
       font-weight: 800;
-      font-size: 24px;
+      font-size: clamp(14px, 6vw, 24px);
       line-height: 100%;
       text-align: center;
       color: #fff;
     }
 
-    @media (max-width: 428px) {
-      margin-bottom: 28px;
-      .title {
-        font-size: 20px;
-      }
-    }
-
-    @media (max-width: 360px) {
-      margin-bottom: 20px;
-      .title {
-        font-size: 14px;
-      }
-    }
-
     .line {
-      width: 126px;
+      width: clamp(90px, 30vw, 126px);
       height: 1px;
       background: rgba(255, 255, 255, 0.4);
-
-      @media (max-width: 428px) {
-        width: 100px;
-      }
-
-      @media (max-width: 360px) {
-        width: 90px;
-      }
     }
   }
 
@@ -72,15 +40,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-bottom: 40px;
-
-    @media (max-width: 428px) {
-      margin-bottom: 32px;
-    }
-
-    @media (max-width: 360px) {
-      margin-bottom: 26px;
-    }
+    margin-bottom: clamp(26px, 8vw, 40px);
 
     .x2 {
       display: flex;
@@ -113,30 +73,12 @@
       align-items: center;
       gap: 8px;
       font-weight: 800;
-      font-size: 32px;
+      font-size: clamp(22px, 8vw, 32px);
       line-height: 100%;
 
       .icon {
-        width: 40px;
-        height: 40px;
-      }
-
-      @media (max-width: 428px) {
-        font-size: 26px;
-
-        .icon {
-          width: 36px;
-          height: 36px;
-        }
-      }
-
-      @media (max-width: 360px) {
-        font-size: 22px;
-
-        .icon {
-          width: 30px;
-          height: 30px;
-        }
+        width: clamp(30px, 9vw, 40px);
+        height: clamp(30px, 9vw, 40px);
       }
     }
   }

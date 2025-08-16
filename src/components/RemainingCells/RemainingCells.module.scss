@@ -1,18 +1,8 @@
 .remaining {
   display: flex;
   justify-content: center;
-  gap: 24px;
-  margin-bottom: 32px;
-
-  @media (max-width: 428px) {
-    margin-bottom: 28px;
-    gap: 16px;
-  }
-
-  @media (max-width: 360px) {
-    margin-bottom: 24px;
-    gap: 12px;
-  }
+  gap: clamp(12px, 5vw, 24px);
+  margin-bottom: clamp(24px, 7vw, 32px);
 }
 
 .item {
@@ -22,33 +12,15 @@
 
   span {
     font-weight: 700;
-    font-size: 16px;
+    font-size: clamp(12px, 4vw, 16px);
     line-height: 120%;
     color: white;
-
-    @media (max-width: 428px) {
-      font-size: 14px;
-    }
-
-    @media (max-width: 360px) {
-      font-size: 12px;
-    }
   }
 }
 
 .icon {
-  width: 32px;
-  height: 32px;
-
-  @media (max-width: 428px) {
-    width: 28px;
-    height: 28px;
-  }
-
-  @media (max-width: 360px) {
-    width: 26px;
-    height: 26px;
-  }
+  width: clamp(26px, 8vw, 32px);
+  height: clamp(26px, 8vw, 32px);
 }
 
 .x2 {
@@ -63,43 +35,16 @@
 }
 
 .zero img {
-  width: 32px;
-  height: 32px;
-  @media (max-width: 428px) {
-    width: 28px;
-    height: 28px;
-  }
-
-  @media (max-width: 360px) {
-    width: 26px;
-    height: 26px;
-  }
+  width: clamp(26px, 8vw, 32px);
+  height: clamp(26px, 8vw, 32px);
 }
 
 .bomb img {
-  width: 32px;
-  height: 32px;
-  @media (max-width: 428px) {
-    width: 28px;
-    height: 28px;
-  }
-
-  @media (max-width: 360px) {
-    width: 26px;
-    height: 26px;
-  }
+  width: clamp(26px, 8vw, 32px);
+  height: clamp(26px, 8vw, 32px);
 }
 
 .stop img {
-  width: 32px;
-  height: 32px;
-  @media (max-width: 428px) {
-    width: 28px;
-    height: 28px;
-  }
-
-  @media (max-width: 360px) {
-    width: 26px;
-    height: 26px;
-  }
+  width: clamp(26px, 8vw, 32px);
+  height: clamp(26px, 8vw, 32px);
 }

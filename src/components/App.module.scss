@@ -9,33 +9,14 @@
   align-items: center;
   min-width: 320px;
   max-width: 428px;
-
-  @media (max-width: 428px) {
-    height: 700px;
-  }
-
-  @media (max-width: 360px) {
-    height: 634px;
-  }
+  height: clamp(634px, 150vw, 926px);
 }
 
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 113px);
-  gap: 8px;
-  margin-bottom: 32px;
-
-  @media (max-width: 428px) {
-    grid-template-columns: repeat(3, 95px);
-    gap: 6px;
-    margin-bottom: 28px;
-  }
-
-  @media (max-width: 360px) {
-    grid-template-columns: repeat(3, 85px);
-    gap: 4px;
-    margin-bottom: 24px;
-  }
+  grid-template-columns: repeat(3, clamp(85px, 22vw, 113px));
+  gap: clamp(4px, 2vw, 8px);
+  margin-bottom: clamp(24px, 7vw, 32px);
 }
 
 .claimBtn {
@@ -43,10 +24,10 @@
   color: white;
   border-radius: 8px;
   padding: 7px 16px 9px 16px;
-  width: 348px;
-  height: 48px;
+  width: clamp(262px, 80vw, 348px);
+  height: clamp(40px, 12vw, 48px);
   font-weight: 800;
-  font-size: 18px;
+  font-size: clamp(15px, 4.5vw, 18px);
   line-height: 100%;
   text-align: center;
   transition: 0.2s;
@@ -56,16 +37,6 @@
     background: transparent;
     color: rgba(255, 255, 255, 0.4);
     cursor: not-allowed;
-  }
-
-  @media (max-width: 428px) {
-    width: 300px;
-    font-size: 16px;
-  }
-
-  @media (max-width: 360px) {
-    width: 262px;
-    font-size: 15px;
   }
 }
 
