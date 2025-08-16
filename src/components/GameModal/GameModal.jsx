@@ -1,22 +1,10 @@
 import styles from "./GameModal.module.scss";
 
-const GameModal = ({
-  type,
-  balance,
-  onRestart,
-  onTakeHit,
-  onDefuse,
-  onClaim,
-  onClose,
-}) => {
+const GameModal = ({ type, balance, onRestart, onDefuse, onClose }) => {
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
-        <img
-          className={styles.logo}
-          src="/icons/logo.svg"
-          alt="logo"
-        />
+        <img className={styles.logo} src="/icons/logo.svg" alt="logo" />
         {type === "bomb" && (
           <>
             <h2 className={`${styles.title} ${styles.titleDenger}`}>
@@ -30,11 +18,7 @@ const GameModal = ({
               <img src="/icons/bomb.svg" alt="bomb" />
             </span>
             <span className={styles.cash}>
-              <img
-                className={styles.icon}
-                src="/icons/cash.svg"
-                alt="cash"
-              />
+              <img className={styles.icon} src="/icons/cash.svg" alt="cash" />
               {balance}
             </span>
             <p>...or defuse it and save your run!</p>
@@ -76,16 +60,17 @@ const GameModal = ({
               <img src="/icons/stop.svg" alt="stop" />
             </span>
             <span className={styles.cash}>
-              <img
-                className={styles.icon}
-                src="/icons/cash.svg"
-                alt="cash"
-              />
+              <img className={styles.icon} src="/icons/cash.svg" alt="cash" />
               {balance}
             </span>
             <p>...claim and return to the main board</p>
             <div className={styles.actions}>
-              <button className={`${styles.btn} ${styles.btnClaim}`} onClick={onRestart}>Claim</button>
+              <button
+                className={`${styles.btn} ${styles.btnClaim}`}
+                onClick={onRestart}
+              >
+                Claim
+              </button>
             </div>
           </>
         )}
@@ -93,18 +78,18 @@ const GameModal = ({
         {type === "claim" && (
           <>
             <h2>You won {balance} coins!</h2>
-           
+
             <span className={styles.cash}>
-              <img
-                className={styles.icon}
-                src="/icons/cash.svg"
-                alt="cash"
-              />
+              <img className={styles.icon} src="/icons/cash.svg" alt="cash" />
               {balance}
             </span>
             <div className={styles.actions}>
-              <button className={styles.btn} onClick={onRestart}>Restart</button>
-              <button className={styles.btn} onClick={onClose}>Close</button>
+              <button className={styles.btn} onClick={onRestart}>
+                Restart
+              </button>
+              <button className={styles.btn} onClick={onClose}>
+                Close
+              </button>
             </div>
           </>
         )}

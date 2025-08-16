@@ -23,6 +23,7 @@
       font-weight: 800;
       font-size: 24px;
       line-height: 100%;
+      text-align: center;
       color: #fff;
     }
 
@@ -35,7 +36,12 @@
 
   .wrapper {
     position: relative;
-    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+        margin-bottom: 40px;
 
     .x2 {
       display: flex;
@@ -43,8 +49,8 @@
       justify-content: center;
       position: absolute;
       top: 50%;
-      left: -42px;
-      transform: translate(-50%, -50%);
+      left: 54px;
+      transform: translateХ(-50%);
       background: #3973e5;
       color: #fff;
       border-radius: 8px;

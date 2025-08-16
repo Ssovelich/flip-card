@@ -15,7 +15,7 @@ const Cell = forwardRef(({ type, short, isOpen, onClick, highlight }, ref) => {
           <img src="/icons/$.svg" alt="$" />
         </div>
 
-        <div className={styles.back}>
+        <div className={styles.backWrapper}>
           {type === "cash" && (
             <span className={styles.cash}>
               <img
