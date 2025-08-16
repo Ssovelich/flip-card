@@ -1,5 +1,5 @@
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
@@ -23,11 +23,27 @@
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: 428px) {
+    padding: 16px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 12px;
+  }
+
   .logo {
     width: 61px;
     height: 35px;
     margin-top: 50px;
     margin-bottom: 170px;
+
+    @media (max-width: 428px) {
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: 360px) {
+      margin-bottom: 40px;
+    }
   }
 
   .title {
@@ -35,6 +51,14 @@
     font-size: 24px;
     line-height: 100%;
     color: #fff;
+
+    @media (max-width: 428px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 18px;
+    }
   }
   .titleDenger {
     text-shadow: 0 1px 9px 0 #fe2c55;
@@ -82,12 +106,23 @@
     font-size: 18px;
     line-height: 100%;
     color: rgba(255, 255, 255, 0.8);
-   transition: background 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out;
 
     &:hover {
       background: #999;
     }
-   
+
+    @media (max-width: 428px) {
+      width: 160px;
+      height: 42px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 360px) {
+      width: 140px;
+      height: 40px;
+      font-size: 14px;
+    }
   }
   .btnHit {
     background: linear-gradient(180deg, #ff5858 0%, #993535 100%);
@@ -95,7 +130,6 @@
   .btnDef {
     background: linear-gradient(180deg, #ad69ff 0%, #6723cd 100%);
   }
-  
 }
 
 .actions {

@@ -3,6 +3,16 @@
   justify-content: center;
   gap: 24px;
   margin-bottom: 32px;
+
+  @media (max-width: 428px) {
+    margin-bottom: 28px;
+    gap: 16px;
+  }
+
+  @media (max-width: 360px) {
+    margin-bottom: 24px;
+    gap: 12px;
+  }
 }
 
 .item {
@@ -15,12 +25,30 @@
     font-size: 16px;
     line-height: 120%;
     color: white;
+
+    @media (max-width: 428px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 12px;
+    }
   }
 }
 
 .icon {
   width: 32px;
   height: 32px;
+
+  @media (max-width: 428px) {
+    width: 28px;
+    height: 28px;
+  }
+
+  @media (max-width: 360px) {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .x2 {
@@ -37,14 +65,41 @@
 .zero img {
   width: 32px;
   height: 32px;
+  @media (max-width: 428px) {
+    width: 28px;
+    height: 28px;
+  }
+
+  @media (max-width: 360px) {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .bomb img {
   width: 32px;
   height: 32px;
+  @media (max-width: 428px) {
+    width: 28px;
+    height: 28px;
+  }
+
+  @media (max-width: 360px) {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .stop img {
- width: 32px;
+  width: 32px;
   height: 32px;
+  @media (max-width: 428px) {
+    width: 28px;
+    height: 28px;
+  }
+
+  @media (max-width: 360px) {
+    width: 26px;
+    height: 26px;
+  }
 }

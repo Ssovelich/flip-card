@@ -1,4 +1,5 @@
 .app {
+  height: 926px;
   background-image: url("/bg.png");
   background-size: cover;
   background-position: center;
@@ -8,7 +9,14 @@
   align-items: center;
   min-width: 320px;
   max-width: 428px;
-  height: 926px;
+
+  @media (max-width: 428px) {
+    height: 700px;
+  }
+
+  @media (max-width: 360px) {
+    height: 634px;
+  }
 }
 
 .board {
@@ -16,6 +24,18 @@
   grid-template-columns: repeat(3, 113px);
   gap: 8px;
   margin-bottom: 32px;
+
+  @media (max-width: 428px) {
+    grid-template-columns: repeat(3, 95px);
+    gap: 6px;
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: 360px) {
+    grid-template-columns: repeat(3, 85px);
+    gap: 4px;
+    margin-bottom: 24px;
+  }
 }
 
 .claimBtn {
@@ -36,6 +56,16 @@
     background: transparent;
     color: rgba(255, 255, 255, 0.4);
     cursor: not-allowed;
+  }
+
+  @media (max-width: 428px) {
+    width: 300px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 360px) {
+    width: 262px;
+    font-size: 15px;
   }
 }
 
