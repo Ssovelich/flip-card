@@ -34,8 +34,8 @@ const App = () => {
   const [gameOver, setGameOver] = useState(false);
   const [modalType, setModalType] = useState(null);
   const [highlightIndex, setHighlightIndex] = useState(null);
-
   const [flyingCash, setFlyingCash] = useState(null);
+  const [isExploded, setIsExploded] = useState(false);
   const headerIconRef = useRef(null);
   const cellRefs = useRef([]);
 
@@ -108,8 +108,14 @@ const App = () => {
     }
 
     if (cell.type === "bomb") {
-      setModalType("bomb");
-    }
+  setIsExploded(true);
+
+  // Спочатку ефект вибуху, потім модалка
+  setTimeout(() => {
+    setIsExploded(false);
+    setModalType("bomb");
+  }, 800); // 1000ms = час вибуху з CSS
+}
   }
 
   function handleClaim() {
@@ -142,7 +148,7 @@ const App = () => {
   }
 
   return (
-    <div className={styles.app}>
+     <div className={`${styles.app} ${isExploded ? styles.bombExplode : ""}`}>
       <Header
         balance={balance}
         multiplier={multiplier}

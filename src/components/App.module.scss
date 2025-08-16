@@ -1,4 +1,5 @@
 .app {
+  position: relative;
   min-height: 100vh; 
   max-height: 926px;
   width: 100vw;
@@ -6,6 +7,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.bombExplode {
+  animation: shake 0.5s ease-in-out;
+}
+.bombExplode::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 0, 0, 0.4);
+  animation: flash 0.4s ease-in-out;
+  pointer-events: none;
 }
 
 .board {
@@ -48,4 +60,17 @@
 
 .animate {
   transform: translate(var(--dx), var(--dy));
+}
+@keyframes shake {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-5px, 0); }
+  40% { transform: translate(5px, 0); }
+  60% { transform: translate(-5px, 0); }
+  80% { transform: translate(5px, 0); }
+}
+
+@keyframes flash {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  100% { opacity: 0; }
 }
