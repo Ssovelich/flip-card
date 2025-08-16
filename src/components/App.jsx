@@ -30,12 +30,14 @@ const App = () => {
   const [opened, setOpened] = useState([]);
   const [balance, setBalance] = useState(0);
   const [multiplier, setMultiplier] = useState(1);
+  const [defuseCount, setDefuseCount] = useState(5);
   const [x2Active, setX2Active] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [modalType, setModalType] = useState(null);
   const [highlightIndex, setHighlightIndex] = useState(null);
   const [flyingCash, setFlyingCash] = useState(null);
   const [isExploded, setIsExploded] = useState(false);
+  const [canClaim, setCanClaim] = useState(false);
   const headerIconRef = useRef(null);
   const cellRefs = useRef([]);
 
@@ -137,7 +139,12 @@ const App = () => {
   }
 
   function handleDefuse() {
-    setModalType(null);
+    if (defuseCount > 0) {
+      setDefuseCount((prev) => prev - 1);
+      setModalType(null);
+      setOpened(board.map((_, idx) => idx));
+      setCanClaim(true);
+    }
   }
 
   function countRemaining(type) {
@@ -183,7 +190,7 @@ const App = () => {
       <button
         className={styles.claimBtn}
         onClick={handleClaim}
-        disabled={balance === 0}
+        disabled={balance === 0 && !canClaim}
       >
         Claim
       </button>
@@ -212,7 +219,7 @@ const App = () => {
           onTakeHit={handleTakeHit}
           onDefuse={handleDefuse}
           onClaim={handleClaim}
-          onClose={() => setModalType(null)}
+          defuseCount={defuseCount}
         />
       )}
     </div>

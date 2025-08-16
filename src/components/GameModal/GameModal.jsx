@@ -1,6 +1,6 @@
 import styles from "./GameModal.module.scss";
 
-const GameModal = ({ type, balance, onRestart, onDefuse, onClose }) => {
+const GameModal = ({ type, balance, onRestart, onDefuse, defuseCount }) => {
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
@@ -40,11 +40,13 @@ const GameModal = ({ type, balance, onRestart, onDefuse, onClose }) => {
               <button
                 className={`${styles.btn} ${styles.btnDef}`}
                 onClick={onDefuse}
+                disabled={defuseCount === 0}
               >
                 Defuse for
                 <span>
                   <img src="/gem.png" alt="gem" />
                 </span>
+                {defuseCount}
               </button>
             </div>
           </>
@@ -86,9 +88,6 @@ const GameModal = ({ type, balance, onRestart, onDefuse, onClose }) => {
             <div className={styles.actions}>
               <button className={styles.btn} onClick={onRestart}>
                 Restart
-              </button>
-              <button className={styles.btn} onClick={onClose}>
-                Close
               </button>
             </div>
           </>
