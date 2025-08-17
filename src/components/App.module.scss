@@ -16,10 +16,10 @@
     flex-direction: column;
     align-items: center;
   }
-  .bombExplode {
+  &.bombExplode {
     animation: shake 0.5s ease-in-out;
   }
-  .bombExplode::after {
+  &.bombExplode::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -69,6 +69,7 @@
   .animate {
     transform: translate(var(--dx), var(--dy));
   }
+  }
   @keyframes shake {
     0%,
     100% {
@@ -99,4 +100,4 @@
       opacity: 0;
     }
   }
-}
+
