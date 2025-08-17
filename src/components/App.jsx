@@ -159,6 +159,7 @@ const App = () => {
     setX2Active(false);
     setGameOver(false);
     setModalType(null);
+    setCanClaim(false);
   }
 
   function handleTakeHit() {
