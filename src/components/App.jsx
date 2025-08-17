@@ -155,73 +155,75 @@ const App = () => {
 
   return (
     <div className={`${styles.app} ${isExploded ? styles.bombExplode : ""}`}>
-      <Header
-        balance={balance}
-        multiplier={multiplier}
-        x2Active={x2Active}
-        iconRef={headerIconRef}
-      />
+      <div className={styles.content}>
+        <Header
+          balance={balance}
+          multiplier={multiplier}
+          x2Active={x2Active}
+          iconRef={headerIconRef}
+        />
 
-      <div className={styles.board}>
-        {board.map((cell, idx) => (
-          <Cell
-            key={idx}
-            ref={(el) => (cellRefs.current[idx] = el)}
-            type={cell.type}
-            short={cell.short}
-            value={cell.value}
-            isOpen={opened.includes(idx) || gameOver}
-            onClick={() => handleCellClick(idx)}
-            highlight={highlightIndex === idx}
-          />
-        ))}
-      </div>
+        <div className={styles.board}>
+          {board.map((cell, idx) => (
+            <Cell
+              key={idx}
+              ref={(el) => (cellRefs.current[idx] = el)}
+              type={cell.type}
+              short={cell.short}
+              value={cell.value}
+              isOpen={opened.includes(idx) || gameOver}
+              onClick={() => handleCellClick(idx)}
+              highlight={highlightIndex === idx}
+            />
+          ))}
+        </div>
 
-      <RemainingCells
-        remaining={{
-          cash: countRemaining("cash"),
-          x2: countRemaining("x2"),
-          zero: countRemaining("zero"),
-          bomb: countRemaining("bomb"),
-          stop: countRemaining("stop"),
-        }}
-      />
-
-      <button
-        className={styles.claimBtn}
-        onClick={handleClaim}
-        disabled={balance === 0 && !canClaim}
-      >
-        Claim
-      </button>
-
-      {flyingCash && (
-        <img
-          src={flyingCash.icon}
-          alt="cash"
-          className={`${styles.flyingCash} ${
-            flyingCash.animate ? styles.animate : ""
-          }`}
-          style={{
-            left: flyingCash.x,
-            top: flyingCash.y,
-            "--dx": `${flyingCash.targetX - flyingCash.x}px`,
-            "--dy": `${flyingCash.targetY - flyingCash.y}px`,
+        <RemainingCells
+          remaining={{
+            cash: countRemaining("cash"),
+            x2: countRemaining("x2"),
+            zero: countRemaining("zero"),
+            bomb: countRemaining("bomb"),
+            stop: countRemaining("stop"),
           }}
         />
-      )}
 
-      {modalType && (
-        <GameModal
-          type={modalType}
-          balance={balance}
-          onRestart={handleRestart}
-          onTakeHit={handleTakeHit}
-          onDefuse={handleDefuse}
-          onClaim={handleClaim}
-          defuseCount={defuseCount}
-        />
-      )}
+        <button
+          className={styles.claimBtn}
+          onClick={handleClaim}
+          disabled={balance === 0 && !canClaim}
+        >
+          Claim
+        </button>
+
+        {flyingCash && (
+          <img
+            src={flyingCash.icon}
+            alt="cash"
+            className={`${styles.flyingCash} ${
+              flyingCash.animate ? styles.animate : ""
+            }`}
+            style={{
+              left: flyingCash.x,
+              top: flyingCash.y,
+              "--dx": `${flyingCash.targetX - flyingCash.x}px`,
+              "--dy": `${flyingCash.targetY - flyingCash.y}px`,
+            }}
+          />
+        )}
+
+        {modalType && (
+          <GameModal
+            type={modalType}
+            balance={balance}
+            onRestart={handleRestart}
+            onTakeHit={handleTakeHit}
+            onDefuse={handleDefuse}
+            onClaim={handleClaim}
+            defuseCount={defuseCount}
+          />
+        )}
+      </div>
     </div>
   );
 };
