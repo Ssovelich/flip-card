@@ -102,16 +102,16 @@ const App = () => {
 
       requestAnimationFrame(() => {
         setFlyingCash((prev) => ({ ...prev, animate: true }));
+        if (coinRef.current) {
+          coinRef.current.currentTime = 0;
+          coinRef.current.play();
+        }
       });
 
       setTimeout(() => {
         setBalance((prev) => prev + cell.value * multiplier);
         setFlyingCash(null);
         setHighlightIndex(null);
-        if (coinRef.current) {
-          coinRef.current.currentTime = 0;
-          coinRef.current.play();
-        }
       }, 600);
     }
 
