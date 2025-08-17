@@ -1,85 +1,102 @@
 .app {
   position: relative;
-  min-height: 100vh; 
+  min-height: 100vh;
   max-height: 926px;
   width: 100vw;
   background: url("/bg.png") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.content {
-  position: relative;
-  width: 100%;
-  max-width: 428px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.bombExplode {
-  animation: shake 0.5s ease-in-out;
-}
-.bombExplode::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 0, 0, 0.4);
-  animation: flash 0.4s ease-in-out;
-  pointer-events: none;
-}
-
-.board {
-  display: grid;
-  grid-template-columns: repeat(3, clamp(85px, 22vw, 113px));
-  gap: clamp(4px, 2vw, 8px);
-  margin-bottom: clamp(24px, 7vw, 32px);
-}
-
-.claimBtn {
-  background: linear-gradient(180deg, #6dbf1d 0%, #498013 100%);
-  color: white;
-  border-radius: 8px;
-  padding: 7px 16px 9px 16px;
-  width: clamp(262px, 80vw, 348px);
-  height: clamp(40px, 12vw, 48px);
-  font-weight: 800;
-  font-size: clamp(15px, 4.5vw, 18px);
-  line-height: 100%;
-  text-align: center;
-  transition: 0.2s;
-
-  &:disabled {
-    border: 1px dashed rgba(255, 255, 255, 0.2);
-    background: transparent;
-    color: rgba(255, 255, 255, 0.4);
-    cursor: not-allowed;
+  .content {
+    position: relative;
+    width: 100%;
+    max-width: 428px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-}
+  .bombExplode {
+    animation: shake 0.5s ease-in-out;
+  }
+  .bombExplode::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 0, 0, 0.4);
+    animation: flash 0.4s ease-in-out;
+    pointer-events: none;
+  }
 
-.flyingCash {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.6s ease-in-out;
-  transform: translate(0, 0);
-}
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, clamp(85px, 22vw, 113px));
+    gap: clamp(4px, 2vw, 8px);
+    margin-bottom: clamp(24px, 7vw, 32px);
+  }
 
-.animate {
-  transform: translate(var(--dx), var(--dy));
-}
-@keyframes shake {
-  0%, 100% { transform: translate(0, 0); }
-  20% { transform: translate(-5px, 0); }
-  40% { transform: translate(5px, 0); }
-  60% { transform: translate(-5px, 0); }
-  80% { transform: translate(5px, 0); }
-}
+  .claimBtn {
+    background: linear-gradient(180deg, #6dbf1d 0%, #498013 100%);
+    color: white;
+    border-radius: 8px;
+    padding: 7px 16px 9px 16px;
+    width: clamp(262px, 80vw, 348px);
+    height: clamp(40px, 12vw, 48px);
+    font-weight: 800;
+    font-size: clamp(15px, 4.5vw, 18px);
+    line-height: 100%;
+    text-align: center;
+    transition: 0.2s;
 
-@keyframes flash {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  100% { opacity: 0; }
+    &:disabled {
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      background: transparent;
+      color: rgba(255, 255, 255, 0.4);
+      cursor: not-allowed;
+    }
+  }
+
+  .flyingCash {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.6s ease-in-out;
+    transform: translate(0, 0);
+  }
+
+  .animate {
+    transform: translate(var(--dx), var(--dy));
+  }
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    20% {
+      transform: translate(-5px, 0);
+    }
+    40% {
+      transform: translate(5px, 0);
+    }
+    60% {
+      transform: translate(-5px, 0);
+    }
+    80% {
+      transform: translate(5px, 0);
+    }
+  }
+
+  @keyframes flash {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 }

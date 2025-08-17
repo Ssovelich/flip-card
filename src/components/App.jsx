@@ -38,8 +38,15 @@ const App = () => {
   const [flyingCash, setFlyingCash] = useState(null);
   const [isExploded, setIsExploded] = useState(false);
   const [canClaim, setCanClaim] = useState(false);
+
   const headerIconRef = useRef(null);
   const cellRefs = useRef([]);
+
+  const explosionRef = useRef(null);
+  const coinRef = useRef(null);
+  const powerUpRef = useRef(null);
+  const stopRef = useRef(null);
+  const zeroRef = useRef(null);
 
   function shuffleArray(array) {
     return [...array].sort(() => Math.random() - 0.5);
@@ -69,6 +76,10 @@ const App = () => {
       setMultiplier((prev) => prev * 2);
       setBalance((prev) => prev * 2);
       setX2Active(true);
+      if (powerUpRef.current) {
+        powerUpRef.current.currentTime = 0;
+        powerUpRef.current.play();
+      }
       return;
     }
 
@@ -97,20 +108,37 @@ const App = () => {
         setBalance((prev) => prev + cell.value * multiplier);
         setFlyingCash(null);
         setHighlightIndex(null);
+        if (coinRef.current) {
+          coinRef.current.currentTime = 0;
+          coinRef.current.play();
+        }
       }, 600);
     }
 
     if (cell.type === "zero") {
       setBalance(0);
+      if (zeroRef.current) {
+        zeroRef.current.currentTime = 0;
+        zeroRef.current.play();
+      }
     }
 
     if (cell.type === "stop") {
+      if (stopRef.current) {
+        stopRef.current.currentTime = 0;
+        stopRef.current.play();
+      }
       setModalType("stop");
       setGameOver(true);
     }
 
     if (cell.type === "bomb") {
       setIsExploded(true);
+
+      if (explosionRef.current) {
+        explosionRef.current.currentTime = 0;
+        explosionRef.current.play();
+      }
 
       setTimeout(() => {
         setIsExploded(false);
@@ -223,6 +251,12 @@ const App = () => {
             defuseCount={defuseCount}
           />
         )}
+
+        <audio ref={explosionRef} src="/sounds/explosion.mp3" preload="auto" />
+        <audio ref={coinRef} src="/sounds/coin.mp3" preload="auto" />
+        <audio ref={powerUpRef} src="/sounds/powerup.mp3" preload="auto" />
+        <audio ref={stopRef} src="/sounds/stop.mp3" preload="auto" />
+        <audio ref={zeroRef} src="/sounds/zero.mp3" preload="auto" />
       </div>
     </div>
   );
