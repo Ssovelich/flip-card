@@ -124,7 +124,7 @@ const GameModal = ({ type, balance, onRestart, onDefuse, defuseCount }) => {
                 <a
                   className={`${styles.btn} ${styles.btnWhatsapp}`}
                   href={`https://wa.me/?text=${encodeURIComponent(
-                    `🎉 I just won ${balance} coins in Roll Craft! 🚀 https://your-game-link.com`
+                    `🎉 I just won ${balance} coins in Roll Craft! 🚀 https://flip-card-mu-sepia.vercel.app/`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -136,7 +136,7 @@ const GameModal = ({ type, balance, onRestart, onDefuse, defuseCount }) => {
                 <a
                   className={`${styles.btn} ${styles.btnTelegram}`}
                   href={`https://t.me/share/url?url=${encodeURIComponent(
-                    "https://your-game-link.com"
+                    "https://flip-card-mu-sepia.vercel.app/"
                   )}&text=${encodeURIComponent(
                     `🎉 I just won ${balance} coins in Roll Craft! 🚀`
                   )}`}
