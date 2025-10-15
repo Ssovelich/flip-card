@@ -9,7 +9,6 @@ const Header = ({ balance, multiplier, iconRef }) => {
 
   return (
     <div className={styles.header}>
-      <img className={styles.logo} src="/icons/logo.svg" alt="logo" />
       <h1 className={styles.titleWrapper}>
         <span className={styles.line}></span>
         <span className={styles.title}>Roll Craft</span>
