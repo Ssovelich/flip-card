@@ -4,7 +4,6 @@ const GameModal = ({ type, balance, onRestart, onDefuse, defuseCount }) => {
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
-        <img className={styles.logo} src="/icons/logo.svg" alt="logo" />
         {type === "bomb" && (
           <>
             <h2 className={`${styles.title} ${styles.titleDenger}`}>
